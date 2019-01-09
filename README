@@ -1,0 +1,28 @@
+This is a project for the STM8S103 (or STM8S105) to be a controller for an
+LCD that is 320x240. Mine happens to be an Emerging Technology device, but
+there are probably many that use the same signals.
+
+The STM8S103 has 8KB of program flash and 1KB of RAM. Obviously there is not
+enough memory to store the graphic display. But there is enough for a text
+framebuffer that is 20 lines of 40 columns. And there is enough CPU speed
+to send 80 4-bit nybbles every 60 microseconds to keep the LCD refreshed.
+
+The font map is 256 characters, 12 pixels high and 8 wide. 96 are the usual
+ASCII characters. Six are line segments and corners for drawing rectangles.
+And 64 characters are pseudo-graphic building blocks with the 12x8 characters
+divided into six blocks of 4 pixels square. The library includes a function
+to plot these dots anywhere in the 80x60 dot area of the LCD. The rest of 
+the characters are available for anything you wish.
+
+This project contains two of my other STM8 libraries. I have included them
+here so you don't have to download and build my library collection just to
+use two of them. (But please feel free to do so if you like.)
+
+The "fontedit" tool is not mine. I have included it for your convenience.
+
+Please visit the Github wiki for the latest information.
+
+Questions and comments welcome. I am also available for software projects.
+
+email: richard@hodges.org
+
